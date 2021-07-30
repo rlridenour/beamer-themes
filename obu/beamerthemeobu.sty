@@ -14,12 +14,14 @@
 \RequirePackage{changepage}
 \RequirePackage{fontspec}
 \RequirePackage{xpatch}
+\RequirePackage{luatextra}
+\RequirePackage[absolute,overlay]{textpos}
+\RequirePackage{calc}
 
 % ====================
 % Fonts
 % ====================
 
-\usepackage{luatextra}
 \defaultfontfeatures{Ligatures=TeX}
 
 \usefonttheme{professionalfonts}
@@ -120,16 +122,26 @@
 
 
 % Title page
+
+
+
  \setbeamertemplate{title page}
  {
-%     \begin{centering}
-         \vskip5ex plus 1filll
+\begin{columns}[c]
+  \begin{column}{.6\textwidth}
+\vfill
          {\usebeamerfont{title page title}\usebeamercolor[fg]{title page}\inserttitle\par\vspace{0.5ex}}
          {\usebeamerfont{title page subtitle}\usebeamercolor[fg]{title page}\insertsubtitle\par\vspace{1.5ex}}
          {\usebeamerfont{title page author}\usebeamercolor[fg]{title page}\insertauthor\par\vspace{1.5ex}}
          {\usebeamerfont{title page institute}\usebeamercolor[fg]{title page}\insertinstitute\par\vspace{1ex}}
-         \vskip0pt plus 1filll
- %    \end{centering}
+\vfill
+         \end{column}
+        \begin{column}{.4\textwidth}
+\vfill
+          \includegraphics[width=50mm]{Theology-green.png}
+          \vfill
+\end{column}
+\end{columns}
  }
 
 % Section page
@@ -145,14 +157,6 @@
 \AtBeginSection[]{
   \sectionpage
   }
-% Footer
-% \setbeamertemplate{footline}{
-%     \hfill%
-%     \usebeamercolor[fg]{page number in head/foot}%
-%     \usebeamerfont{page number in head/foot}%
-%     \hspace{2em}%
-%     \insertframenumber\kern1em\vskip2ex%
-% }
 
 % Frame title
 \setbeamertemplate{frametitle}{
