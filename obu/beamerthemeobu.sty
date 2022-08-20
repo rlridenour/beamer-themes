@@ -12,36 +12,20 @@
 \RequirePackage{exscale}
 \RequirePackage{ragged2e}
 \RequirePackage{changepage}
-\RequirePackage{fontspec}
+\RequirePackage[T1]{fontenc}
+% \RequirePackage{fontspec}
 \RequirePackage{xpatch}
-\RequirePackage{luatextra}
+% \RequirePackage{luatextra}
 \RequirePackage[absolute,overlay]{textpos}
 \RequirePackage{calc}
+\RequirePackage{helvet}
+\RequirePackage{mathastext}
+\RequirePackage{isomath}
 
 % ====================
 % Fonts
 % ====================
 
-\defaultfontfeatures{Ligatures=TeX}
-
-\usefonttheme{professionalfonts}
-
-% \newfontfamily\Raleway[Ligatures=TeX]{Raleway}
-% \newfontfamily\Lato[Ligatures=TeX]{Lato}
-
-% \setsansfont{Lato}[
-%   UprightFont=*-Regular,
-%   ItalicFont=*-Italic,
-%   BoldFont=*-Bold,
-%   BoldItalicFont=*-BoldItalic
-% ]
-% \setmonofont{Hack}
-
-% \setbeamerfont{title page}{family=\Raleway}
-
-\usefonttheme{serif}
-\setmainfont{Helvetica Neue}
-\usepackage[scaled=1.1]{newtxsf}
 
 \AtBeginDocument{%
   \DeclareMathSymbol{0}{\mathalpha}{operators}{`0}%
@@ -139,7 +123,7 @@
          \end{column}
         \begin{column}{.4\textwidth}
 \vfill
-          \includegraphics[width=50mm]{Theology-green.png}
+          \includegraphics[width=50mm]{OBU-Green.png}
           \vfill
 \end{column}
 \end{columns}

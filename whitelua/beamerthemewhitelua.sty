@@ -1,5 +1,5 @@
-% WHITE theme
-% https://github.com/rlridenour/beamer-themes/white
+% White theme
+% https://github.com/rlridenour/beamer-whitelua
 
 
 % Adapted from the Auriga theme
@@ -12,20 +12,34 @@
 \RequirePackage{exscale}
 \RequirePackage{ragged2e}
 \RequirePackage{changepage}
-\RequirePackage[T1]{fontenc}
-% \RequirePackage{fontspec}
+\RequirePackage{fontspec}
 \RequirePackage{xpatch}
-% \RequirePackage{luatextra}
-\RequirePackage[absolute,overlay]{textpos}
-\RequirePackage{calc}
-\RequirePackage{helvet}
-\RequirePackage{mathastext}
-\RequirePackage{isomath}
 
 % ====================
 % Fonts
 % ====================
 
+\usepackage{luatextra}
+\defaultfontfeatures{Ligatures=TeX}
+
+\usefonttheme{professionalfonts}
+
+% \newfontfamily\Raleway[Ligatures=TeX]{Raleway}
+% \newfontfamily\Lato[Ligatures=TeX]{Lato}
+
+% \setsansfont{Lato}[
+%   UprightFont=*-Regular,
+%   ItalicFont=*-Italic,
+%   BoldFont=*-Bold,
+%   BoldItalicFont=*-BoldItalic
+% ]
+% \setmonofont{Hack}
+
+% \setbeamerfont{title page}{family=\Raleway}
+
+\usefonttheme{serif}
+\setmainfont{Helvetica Neue}
+\usepackage[scaled=1.1]{newtxsf}
 
 \AtBeginDocument{%
   \DeclareMathSymbol{0}{\mathalpha}{operators}{`0}%
@@ -107,24 +121,23 @@
 
 % Title page
 
+\setbeamertemplate{title page}
+{
+  \begin{columns}[c]
+    \begin{column}{.6\textwidth}
+      \vfill
+      {\usebeamerfont{title page title}\usebeamercolor[fg]{title page}\inserttitle\par\vspace{0.5ex}}
+      {\usebeamerfont{title page subtitle}\usebeamercolor[fg]{title page}\insertsubtitle\par\vspace{1.5ex}}
+      {\usebeamerfont{title page author}\usebeamercolor[fg]{title page}\insertauthor\par\vspace{1ex}}
+      {\usebeamerfont{title page institute}\usebeamercolor[fg]{title page}\insertinstitute\par\vspace{1ex}}
+      {\usebeamerfont{title page institute}\usebeamercolor[fg]{title page}\insertdate\par\vspace{1ex}}
+      \vfill
+    \end{column}
+    \begin{column}{.4\textwidth}
 
-
- \setbeamertemplate{title page}
- {
-\begin{columns}[c]
-  \begin{column}{.6\textwidth}
-\vfill
-         {\usebeamerfont{title page title}\usebeamercolor[fg]{title page}\inserttitle\par\vspace{0.5ex}}
-         {\usebeamerfont{title page subtitle}\usebeamercolor[fg]{title page}\insertsubtitle\par\vspace{1.5ex}}
-         {\usebeamerfont{title page author}\usebeamercolor[fg]{title page}\insertauthor\par\vspace{1ex}}
-         {\usebeamerfont{title page institute}\usebeamercolor[fg]{title page}\insertinstitute\par\vspace{1ex}}
-         {\usebeamerfont{title page institute}\usebeamercolor[fg]{title page}\insertdate\par\vspace{1ex}}
-\vfill
-         \end{column}
-        \begin{column}{.4\textwidth}
-\end{column}
-\end{columns}
- }
+    \end{column}
+  \end{columns}
+}
 
 % Section page
 \setbeamertemplate{section page}
@@ -139,6 +152,14 @@
 \AtBeginSection[]{
   \sectionpage
   }
+% Footer
+% \setbeamertemplate{footline}{
+%     \hfill%
+%     \usebeamercolor[fg]{page number in head/foot}%
+%     \usebeamerfont{page number in head/foot}%
+%     \hspace{2em}%
+%     \insertframenumber\kern1em\vskip2ex%
+% }
 
 % Frame title
 \setbeamertemplate{frametitle}{
@@ -147,4 +168,4 @@
     {\usebeamerfont{frametitle}\usebeamercolor[fg]{frametitle}\insertframetitle}
 }
 
-\usecolortheme{white}
+\usecolortheme{whitelua}

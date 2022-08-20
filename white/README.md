@@ -1,1 +1,1 @@
-# beamer-luawhite
+# beamer-obupdf
