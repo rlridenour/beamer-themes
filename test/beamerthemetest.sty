@@ -1,5 +1,5 @@
-% OBU White theme
-% https://github.com/rlridenour/beamer-themes/white
+% OBUtest theme
+% https://github.com/rlridenour/beamer-themes/test
 
 
 % Adapted from the Auriga theme
@@ -63,7 +63,7 @@
   \DeclareMathSymbol{9}{\mathalpha}{operators}{`9}%
 }
 
-\setbeamerfont{title page title}{size=\LARGE,series=\bfseries}
+\setbeamerfont{title page title}{size=\Large,series=\bfseries}
 \setbeamerfont{title page subtitle}{size=\large,series=\bfseries}
 \setbeamerfont{title page author}{size=\small}
 \setbeamerfont{title page institute}{size=\footnotesize}
@@ -177,22 +177,22 @@
 \fi
 
 \if@doplain
-  \setbeamertemplate{title page}
-  {
-    \begin{columns}[c]
-      \begin{column}{.6\textwidth}
-        \vfill
-        {\usebeamerfont{title page title}\usebeamercolor[fg]{title page}\inserttitle\par\vspace{0.5ex}}
-        {\usebeamerfont{title page subtitle}\usebeamercolor[fg]{title page}\insertsubtitle\par\vspace{1.5ex}}
-        {\usebeamerfont{title page author}\usebeamercolor[fg]{title page}\insertauthor\par\vspace{1ex}}
-        {\usebeamerfont{title page institute}\usebeamercolor[fg]{title page}\insertinstitute\par\vspace{1ex}}
-        {\usebeamerfont{title page institute}\usebeamercolor[fg]{title page}\insertdate\par\vspace{1ex}}
-        \vfill
-      \end{column}
-      \begin{column}{.4\textwidth}
-      \end{column}
-    \end{columns}
-  }
+ \setbeamertemplate{title page}
+ {
+\begin{columns}[c]
+  \begin{column}{.6\textwidth}
+\vfill
+         {\usebeamerfont{title page title}\usebeamercolor[fg]{title page}\inserttitle\par\vspace{0.5ex}}
+         {\usebeamerfont{title page subtitle}\usebeamercolor[fg]{title page}\insertsubtitle\par\vspace{1.5ex}}
+         {\usebeamerfont{title page author}\usebeamercolor[fg]{title page}\insertauthor\par\vspace{1ex}}
+         {\usebeamerfont{title page institute}\usebeamercolor[fg]{title page}\insertinstitute\par\vspace{1ex}}
+         {\usebeamerfont{title page institute}\usebeamercolor[fg]{title page}\insertdate\par\vspace{1ex}}
+\vfill
+         \end{column}
+        \begin{column}{.4\textwidth}
+\end{column}
+\end{columns}
+ }
 \fi
 
 
@@ -203,7 +203,7 @@
 {
   \begin{centering}
     \vspace*{\fill}
-    {\usebeamerfont{title page title}\usebeamercolor[fg]{title page}\insertsection\\[1.5ex]}
+    {\usebeamerfont{section page}\usebeamercolor[fg]{title page}\insertsection\\[1.5ex]}
     \vspace*{\fill}
   \end{centering}
   \framebreak
@@ -213,13 +213,12 @@
 \setbeamertemplate{subsection page}
 {
   % \begin{centering}
-  \vspace*{\fill}
-  {\usebeamerfont{subsection page}\usebeamercolor[fg]{title page}\insertsubsection\\[1.5ex]}
-  \vspace*{\fill}
+    \vspace*{\fill}
+    {\usebeamerfont{subsection page}\usebeamercolor[fg]{title page}\insertsubsection\\[1.5ex]}
+    \vspace*{\fill}
   % \end{centering}
   \framebreak
 }
-
 
 \if@doSections
   \AtBeginSection[]{
@@ -230,6 +229,9 @@
   }
 \fi
 
+
+
+
 % Frame title
 \setbeamertemplate{frametitle}{
   \nointerlineskip
@@ -237,4 +239,4 @@
   {\usebeamerfont{frametitle}\usebeamercolor[fg]{frametitle}\insertframetitle}
 }
 
-\usecolortheme{white}
+\usecolortheme{test}
